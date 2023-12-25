@@ -157,16 +157,26 @@
 
 
   .wrapper {
-
     display: flex;
-    width: 100vw;
-    transform:  translate(-50%, -50%);
-    gap: 10px;
+    /* justify-content: space-between;  */
+    align-items: center; 
+    height: 33vmin;
+    padding: 0 20px; 
+    width: 100%; 
+    box-sizing: border-box; 
     background-color: #2c2c2c;
-    margin-left: 50vw;
+  }
+
+  .header-wrapper {
+    text-align: center;
+    background-color: #2c2c2c;
+    color: #fff;
+    font-size: 60px;
   }
   
   .wrapper .container {
+    margin-right: 10%;
+    margin-left: 10%;
     width: 28vmin;
     height: 28vmin;
     display: flex;
@@ -196,8 +206,21 @@
     font-weight: 400;
     line-height: 0;
   }
+
+  @media only screen and (max-width: 768px) {
+    .wrapper {
+      height: auto; /* Или желаемая высота */
+      flex-wrap: wrap; /* Контейнеры будут переноситься на новую строку */
+      justify-content: space-around; /* Равномерно распределит контейнеры с учетом переноса */
+      padding: 0; /* Удалите отступы, если они больше не нужны */
+    }
+    .container {
+      width: 100%; /* На маленьких экранах контейнеры будут на всю ширину */
+      margin-bottom: 20px; /* Добавьте нижний отступ между элементами при переносе */
+    }
+  }
   
-  @media screen and (max-width:1024px) {
+  /* @media screen and (max-width:1024px) {
     .wrapper {
       width: 85vw;
     }
@@ -231,7 +254,7 @@
       height: 25vmin;
       font-size: 8px;
     }
-  }
+  } */
   
 
 
