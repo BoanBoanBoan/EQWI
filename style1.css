@@ -3,7 +3,6 @@
     padding: 0;
 }
 
-
 .logo {
     width: 100%;
     height: 80px;
@@ -76,12 +75,9 @@
   }
 
   
-  @import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap');
-
   .global-locations {
     margin: 0;
-    font-family: 'Lora', serif;
-    font-style: italic;
+    font-family: "Lora", serif;
     font-weight: 400;
     background-color: #2c2c2c;
     text-align: center;
@@ -104,6 +100,7 @@
     align-items: center;
     width: fit-content;
     animation: carouselAnim 50s infinite alternate linear;
+    
   }
   
   .global-locations .entry {
@@ -153,12 +150,8 @@
   }
   
   
- 
-
-
   .wrapper {
     display: flex;
-    /* justify-content: space-between;  */
     align-items: center; 
     height: 33vmin;
     padding: 0 20px; 
@@ -172,6 +165,9 @@
     background-color: #2c2c2c;
     color: #fff;
     font-size: 60px;
+    height: 150px;
+    padding-top: 40px;
+    font-family: "Lora", serif;
   }
   
   .wrapper .container {
@@ -200,65 +196,70 @@
   
   .wrapper span.text {
     color: #e0e0e0;
-    font-size: 1.1em;
+    /* font-size: 1.1em; */
+    font-size: 100%;
     text-align: center;
     pad: 0.7em 0;
     font-weight: 400;
     line-height: 0;
   }
 
+  .bottom-wrapper {
+    text-align: center;
+    background-color: #2c2c2c;
+    color: #fff;
+    font-size: 30px;
+    height: 460px;
+    padding-top: 40px;
+    font-family: "Lora", serif;
+    width: 100%;
+  }
+
+  .bottom-wrapper-new {
+    text-align: center;
+    background-color: #2c2c2c;
+    color: #fff;
+    font-size: 30px;
+    height: 200px;
+    padding-top: 40px;
+    font-family: "Lora", serif;
+    width: 100%;
+  }
+
   @media only screen and (max-width: 768px) {
     .wrapper {
-      height: auto; /* Или желаемая высота */
-      flex-wrap: wrap; /* Контейнеры будут переноситься на новую строку */
-      justify-content: space-around; /* Равномерно распределит контейнеры с учетом переноса */
-      padding: 0; /* Удалите отступы, если они больше не нужны */
+      height: auto; 
+      flex-wrap: wrap; 
+      justify-content: space-around;
+      flex-direction: column;  
     }
     .container {
-      width: 100%; /* На маленьких экранах контейнеры будут на всю ширину */
-      margin-bottom: 20px; /* Добавьте нижний отступ между элементами при переносе */
+      width: 100%; 
+      margin-bottom: 20px; 
+    }
+    .header-wrapper {
+      font-size: x-large;
+      height: 25%; 
+    }
+    .wrapper span.num  {
+      font-size: x-large; 
+      height: 25%;
+    }
+    .wrapper span.text {
+      font-size: x-small; 
+      height: 30%;
+    }
+    .bottom-wrapper {
+      font-size: small;
+      height: 25%;
+    }
+    .bottom-wrapper-new {
+      font-size: small;
+      height: 25%;
     }
   }
-  
-  /* @media screen and (max-width:1024px) {
-    .wrapper {
-      width: 85vw;
-    }
-    .container {
-      height: 26vmin;
-      width: 26vmin;
-      font-size: 12px;
-    }
-  }
-  
-  @media screen and (max-width: 768px) {
-    .wrapper{
-      width: 90vw;
-      flex-wrap: wrap;
-      gap: 30px;
-    }
-  
-    .container {
-      width: calc(50% -40px);
-      height: 30vmin;
-      font-size: 13px;
-    }
-  }
-  @media screen and (max-width: 480px) {
-    .wrapper{
-      gap: 15px;
-    }
-  
-    .container {
-      width: 100%;
-      height: 25vmin;
-      font-size: 8px;
-    }
-  } */
-  
 
 
-  
 .footer-distributed{
 
 	background: #2c2c2c;
