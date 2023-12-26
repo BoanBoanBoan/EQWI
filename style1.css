@@ -34,6 +34,12 @@
     }
 }
 
+@media only screen and (max-width: 1024px) {
+  .header {
+      height: 35vh;
+  }
+}
+
   .about-us,
   .contacts,
   .locations,
@@ -260,12 +266,27 @@
   }
 
 
+  @media only screen and (max-width: 1024px) {
+    .container {
+      width: 100%; 
+      margin-bottom: 30px;
+    }
+    .wrapper {
+      height: auto; 
+      flex-wrap: wrap; 
+      justify-content: space-around;
+      flex-direction: column;  
+    }
+  }
+
+
 .footer-distributed{
 
 	background: #2c2c2c;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
 	width: 100%;
+  height: 400px;
 	text-align: left;
 	font: bold 16px sans-serif;
 	padding: 50px 50px;
@@ -354,7 +375,7 @@
 
 
 
-@media (max-width: 880px) {
+@media (max-width: 768px) {
 
 	.footer-distributed{
         min-height: 200px;
