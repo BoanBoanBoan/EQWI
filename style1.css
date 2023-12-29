@@ -28,22 +28,23 @@
   filter: brightness(80%);
 }
 
+@media only screen and (max-width: 1024px) {
+    .header {
+        height: 35vh;
+    }
+  }
+
 @media only screen and (max-width: 768px) {
     .header {
         height: 25vh;
     }
 }
 
-@media only screen and (max-width: 1024px) {
-  .header {
-      height: 35vh;
-  }
-}
 
-  .about-us,
-  .contacts,
+  .statistics,
   .locations,
-  .clients {
+  .our_team,
+  .contacts {
     position: relative;
     top: 0;
     left: 0;
@@ -61,20 +62,20 @@
   }
 
 
-  .about-us:hover,
-  .contacts:hover,
+  .statistics:hover,
   .locations:hover,
-  .clients:hover {
+  .our_team:hover,
+  .contacts:hover {
     color: gray;
     text-decoration: none;
     transform: scale(1.05);
   }
 
   @media screen and (max-width: 768px) {
-    .about-us,
-    .contacts,
+    .statistics,
     .locations,
-    .clients {
+    .our_team,
+    .contacts {
         font-size: 2vw;
         margin-right: 2vw;
     }
@@ -280,17 +281,94 @@
   }
 
 
-  .team-header{
+  .bottom-wrapper-clients{
     text-align: center;
     background-color: #2c2c2c;
     color: #fff;
     font-size: 30px;
-    height: 250px;
+    height: 100px;
     padding-top: 40px;
     font-family: "Lora", serif;
     width: 100%;
   }
+ 
+  @keyframes slides {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
   
+  .logos {
+    overflow: hidden;
+    padding: 30px 0px;
+    white-space: nowrap;
+    position: relative;
+    background-color: #2c2c2c;
+  }
+  
+  .logos:before, .logos:after {
+    position: absolute;
+    top: 0;
+    content: '';
+    width: 250px;
+    height: 100%;
+    z-index: 2;
+  }
+  
+  .logos:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255,255,255,0), rgb(255, 255, 255));
+  }
+  
+  .logos:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255,255,255,0), rgb(255, 255, 255));
+  }
+  
+  .logo_items {
+    display: inline-block;
+    animation: 35s slides infinite linear;
+  }
+  
+  .logos:hover .logo_items {
+    animation-play-state: paused;
+  }
+  
+  .logo_items img{
+    height: 100px;
+  }
+
+
+
+
+
+
+
+
+  .team-header{
+    text-align: center;
+    background-color: #2c2c2c;
+    color: #fff;
+    font-size: 60px;
+    height: 100px;
+    padding-top: 40px;
+    font-family: "Lora", serif;
+  }
+  
+  .team-text{
+    text-align: center;
+    background-color: #2c2c2c;
+    color: #fff;
+    font-size: 30px;
+    height: 200px;
+    padding-top: 40px;
+    font-family: "Lora", serif;
+    width: 100%;
+  }
+
   .team-card{
     width:20%;
     gap:5%
