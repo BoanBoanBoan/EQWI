@@ -187,7 +187,7 @@
     justify-content: space-around;
     padding: 1em 0;
     position: relative;
-    font-size: 18px;
+    font-size: 16px;
     border-radius: 0.5em;
     background-color: #21242b;
     border-bottom: 10px solid grey;
@@ -242,10 +242,9 @@
     }
     .container {
       width: 100%; 
-      margin-bottom: 20px; 
     }
     .header-wrapper {
-      font-size: x-large;
+      font-size: 22px;
       height: 25%; 
     }
     .wrapper span.num  {
@@ -264,13 +263,13 @@
       font-size: small;
       height: 25%;
     }
+
   }
 
 
   @media only screen and (max-width: 1024px) {
     .container {
       width: 100%; 
-      margin-bottom: 30px;
     }
     .wrapper {
       height: auto; 
