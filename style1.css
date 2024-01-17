@@ -100,13 +100,14 @@
     width: 100%;
     overflow: hidden;
     position: relative;
+    display: flex;
   }
   
   .global-locations .items {
     display: flex;
     align-items: center;
     width: fit-content;
-    animation: carouselAnim 50s infinite alternate linear;
+    animation: carouselAnim 50s infinite linear;
     
   }
   
@@ -125,15 +126,12 @@
   
   @media only screen and (max-width: 768px) {
     .items {
-      animation: carouselAnim 35s infinite alternate linear;
+      animation: carouselAnim 35s infinite linear;
     }
     
     @keyframes carouselAnim {
-      from {
-        transform: translate(0, 0);
-      }
-      to {
-        transform: translate(calc(-100% + (2 * 300px)));
+      100% { 
+        transform: translateX(-100%);  
       }
     }
   }
@@ -148,11 +146,8 @@
   }
   
   @keyframes carouselAnim {
-    from {
-      transform: translate(0, 0);
-    }
-    to {
-      transform: translate(calc(-100% + (5 * 300px)));
+    100% { 
+      transform: translateX(-100%);  
     }
   }
   
@@ -292,11 +287,8 @@
   }
  
   @keyframes slides {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-100%);
+    100% { 
+      transform: translateX(-100%);  
     }
   }
   
@@ -306,6 +298,7 @@
     white-space: nowrap;
     position: relative;
     background-color: #2c2c2c;
+    display: flex;
   }
   
   .logos:before, .logos:after {
@@ -328,8 +321,8 @@
   }
   
   .logo_items {
-    display: inline-block;
-    animation: 35s slides infinite linear;
+    display: flex;
+    animation: 50s slides infinite linear;
   }
   
   .logos:hover .logo_items {
@@ -338,6 +331,7 @@
   
   .logo_items img{
     height: 100px;
+    margin-right: 5px;
   }
 
 
